@@ -1,0 +1,6 @@
+@WPM.Management.Api_HostAddress = http://localhost:5182
+
+GET {{WPM.Management.Api_HostAddress}}/pets/
+Accept: application/json
+
+###
