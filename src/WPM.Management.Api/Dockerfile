@@ -12,7 +12,7 @@ EXPOSE 8081
 FROM mcr.microsoft.com/dotnet/sdk:9.0 AS build
 ARG BUILD_CONFIGURATION=Release
 WORKDIR /src
-COPY ["WPM.Management.Api/WPM.Management.Api.csproj", "Wpm.Management.Api/"]
+COPY ["WPM.Management.Api/WPM.Management.Api.csproj", "WPM.Management.Api/"]
 RUN dotnet restore "./WPM.Management.Api/WPM.Management.Api.csproj"
 COPY . .
 WORKDIR "/src/Wpm.Management.Api"
