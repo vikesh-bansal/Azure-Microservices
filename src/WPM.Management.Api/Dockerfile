@@ -15,7 +15,7 @@ WORKDIR /src
 COPY ["WPM.Management.Api/WPM.Management.Api.csproj", "WPM.Management.Api/"]
 RUN dotnet restore "./WPM.Management.Api/WPM.Management.Api.csproj"
 COPY . .
-WORKDIR "/src/Wpm.Management.Api"
+WORKDIR "/src/WPM.Management.Api"
 RUN dotnet build "./WPM.Management.Api.csproj" -c $BUILD_CONFIGURATION -o /app/build
 
 # This stage is used to publish the service project to be copied to the final stage
