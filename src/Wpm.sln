@@ -7,6 +7,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Wpm.Management.Api", "Wpm.M
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPM.Management.Api", "Wpm.Management.Api\WPM.Management.Api.csproj", "{58203A7C-2689-476F-9570-CC5B52A55DD8}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "GitHub Actions", "GitHub Actions", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
+	ProjectSection(SolutionItems) = preProject
+		..\.github\workflows\main.yml = ..\.github\workflows\main.yml
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -35,5 +40,8 @@ Global
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{58203A7C-2689-476F-9570-CC5B52A55DD8} = {CFD5E8EF-649C-C38C-18E6-AAC8AD6F97B3}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1487DF6B-2BDA-497D-ACB8-A257555FCAFB}
 	EndGlobalSection
 EndGlobal
