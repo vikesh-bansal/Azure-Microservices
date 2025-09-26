@@ -44,8 +44,8 @@ public class PetsController : ControllerBase
         if (petUpdate != null)
         {
             petUpdate.Age=pet.Age;
-            pet.BreedId=petUpdate.BreedId;
-            pet.Name=petUpdate.Name; 
+            petUpdate.BreedId= pet.BreedId;
+            petUpdate.Name= pet.Name; 
             _dbContext.Pets.Update(petUpdate);
             await _dbContext.SaveChangesAsync();
             return Ok(pet);
