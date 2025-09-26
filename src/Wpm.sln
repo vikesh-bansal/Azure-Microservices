@@ -12,7 +12,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "GitHub Actions", "GitHub Ac
 		..\.github\workflows\main.yml = ..\.github\workflows\main.yml
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPM.Clinic.Api", "WPM.Clinic\WPM.Clinic.Api.csproj", "{5AA4AEE6-53E9-4EDE-BAEF-F4319FF96F95}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPM.Clinic.Api", "WPM.Clinic.Api\WPM.Clinic.Api.csproj", "{5AA4AEE6-53E9-4EDE-BAEF-F4319FF96F95}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
