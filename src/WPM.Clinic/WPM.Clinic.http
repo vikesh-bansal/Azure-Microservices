@@ -1,0 +1,6 @@
+@WPM.Clinic_HostAddress = http://localhost:5278
+
+GET {{WPM.Clinic_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
