@@ -41,7 +41,8 @@ jobs:
         uses: azure/container-apps-deploy-action@v2
         with:
             acrName: ${{ secrets.ACR_USERNAME }}
-            acrUsername: ${{ secrets.ACR_PASSWORD }}
+            acrUsername: ${{ secrets.ACR_USERNAME }}
+            acrPassword: ${{ secrets.ACR_PASSWORD }}
             containerAppName: wpm-management
             resourceGroup: wpm
             imageToDeploy: ${{ secrets.ACR_LOGIN_SERVER }}/wpm-management-api:${{ env.DATE_TIME }}.${{ github.run_number }}
@@ -51,7 +52,8 @@ jobs:
         uses: azure/container-apps-deploy-action@v2
         with:
             acrName: ${{ secrets.ACR_USERNAME }}
-            acrUsername: ${{ secrets.ACR_PASSWORD }}
+            acrUsername: ${{ secrets.ACR_USERNAME}}
+            acrPassword: ${{ secrets.ACR_PASSWORD }}
             containerAppName: wpm-clinic
             resourceGroup: wpm
             imageToDeploy: ${{ secrets.ACR_LOGIN_SERVER }}/wpm-clinic-api:${{ env.DATE_TIME }}.${{ github.run_number }}
