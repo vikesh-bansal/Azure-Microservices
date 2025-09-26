@@ -9,7 +9,7 @@ namespace WPM.Management.Api.Controllers;
 [Route("api/[controller]")]
 public class PetsController : ControllerBase
 {
-    private ManagementDbContext _dbContext;
+    private readonly ManagementDbContext _dbContext;
     public PetsController(ManagementDbContext dbContext)
     {
         _dbContext = dbContext;
@@ -35,6 +35,25 @@ public class PetsController : ControllerBase
         await _dbContext.Pets.AddAsync(pet);
         await _dbContext.SaveChangesAsync();
         return CreatedAtRoute(nameof(GetById), new { id = pet.Id }, newPet);
+    }
+
+    [HttpPut]
+    public async Task<IActionResult> Update(Pet pet)
+    {
+        var petUpdate=_dbContext.Pets.Where(p=> p.Id== pet.Id).FirstOrDefault();
+        if (petUpdate != null)
+        {
+            petUpdate.Age=pet.Age;
+            pet.BreedId=petUpdate.BreedId;
+            pet.Name=petUpdate.Name; 
+            _dbContext.Pets.Update(petUpdate);
+            await _dbContext.SaveChangesAsync();
+            return Ok(pet);
+        }
+        else
+        {
+            return NotFound(pet);
+        }
     }
 }
 

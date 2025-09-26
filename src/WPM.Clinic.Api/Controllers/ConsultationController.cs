@@ -7,7 +7,7 @@ namespace WPM.Clinic.Controllers
     [Route("api/[controller]")]
     public class ConsultationController : ControllerBase
     {
-        private ClinicApplicationService _clinicalApplicationService;
+        private readonly ClinicApplicationService _clinicalApplicationService;
         public ConsultationController(ClinicApplicationService clinicApplicationService)
         {
             _clinicalApplicationService = clinicApplicationService;

@@ -1,4 +1,5 @@
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Caching.Memory;
 using Polly;
 using WPM.Clinic.Application;
 using WPM.Clinic.DataAccess;
@@ -18,6 +19,7 @@ builder.Services.AddDbContext<ClinicDbContext>(options=>
 {
     options.UseInMemoryDatabase("WpmClinic");
 });
+builder.Services.AddMemoryCache();
 builder.Services.AddHttpClient<ManagementService>(client =>
 {
     var uri = builder.Configuration.GetValue<string>("Wpm__ManagementUri")?? builder.Configuration.GetValue<string>("Wpm:ManagementUri");

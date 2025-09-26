@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Mvc.ModelBinding.Validation;
+using Microsoft.EntityFrameworkCore;
 
 namespace WPM.Management.Api.DataAccess
 {
@@ -43,6 +44,7 @@ namespace WPM.Management.Api.DataAccess
         public string Name { get; set; }
         public int Age { get; set; }
         public int BreedId { get; set; }
+        [ValidateNever]
         public Breed Breed { get; set; }
     }
     public record Breed(int Id, string Name);
